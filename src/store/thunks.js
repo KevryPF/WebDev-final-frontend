@@ -40,3 +40,12 @@ export const fetchAllTasksThunk = () => async (dispatch) => {
       console.error(err);
     }
   };
+
+  export const editTaskThunk = task => async dispatch => {
+    try {
+      let res = await axios.put(`${path}/tasks/${task.id}`, task);
+      dispatch(ac.editTask(res.data));
+    } catch(err) {
+      console.error(err);
+    }
+  };
