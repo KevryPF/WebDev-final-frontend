@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { useParams } from "react-router";
-import { fetchTaskThunk, fetchEmployeeThunk } from "../../store/thunks";
+import { fetchTaskThunk } from "../../store/thunks";
 import TaskView from "../views/TaskView";
 
 //Added this from https://stackoverflow.com/questions/69967745/react-router-v6-access-a-url-parameter 
@@ -19,7 +19,6 @@ const withRouter = WrappedComponent => props => {
 class TaskContainer extends Component {
   componentDidMount() {
     //getting task ID from url
-    this.props.fetchEmployee(this.props.params.id);
     this.props.fetchTask(this.props.params.id);
   }
 
@@ -45,7 +44,6 @@ const mapState = (state) => {
 const mapDispatch = (dispatch) => {
   return {
     fetchTask: (id) => dispatch(fetchTaskThunk(id)),
-    fetchEmployee: (id) => dispatch(fetchEmployeeThunk(id))
   };
 };
 
