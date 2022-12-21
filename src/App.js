@@ -4,7 +4,9 @@ import {
   AllEmployeesContainer,
   AllTasksContainer,
   HomePageContainer,
-  NavbarContainer
+  NavbarContainer,
+  EmployeeContainer,
+  TaskContainer
 } from './components/containers';
 
 const App = () => {
@@ -14,7 +16,9 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<HomePageContainer/>} />
           <Route exact path="/employees" element={<AllEmployeesContainer/>} />
+          <Route exact path="/employee/:id" element={<EmployeeContainer/>} />
           <Route exact path="/tasks" element={<AllTasksContainer/>} />
+          <Route exact path="/task/:id" element={<TaskContainer/>} />
         </Routes>
     </div>
   );
