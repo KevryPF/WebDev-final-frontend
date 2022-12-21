@@ -22,6 +22,13 @@ export const editEmployee = (employee) => {
   };
 }
 
+export const addEmployee = (employee) => {
+  return {
+    type: at.ADD_EMPLOYEE,
+    payload: employee,
+  };
+};
+
 // TASK ACTIONS
 export const fetchAllTasks = (tasks) => {
     return {
@@ -40,6 +47,13 @@ export const fetchTask = (task) => {
 export const editTask = (task) => {
   return {
     type: at.EDIT_TASK,
+    payload: task,
+  };
+};
+
+export const addTask = (task) => {
+  return {
+    type: at.ADD_TASK,
     payload: task,
   };
 };
