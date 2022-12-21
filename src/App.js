@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import {
+  AllEmployeesContainer,
+  AllTasksContainer,
+  HomePageContainer,
+  NavbarContainer
+} from './components/containers';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavbarContainer></NavbarContainer>
+        <Routes>
+          <Route exact path="/" element={<HomePageContainer/>} />
+          <Route exact path="/employees" element={<AllEmployeesContainer/>} />
+          <Route exact path="/tasks" element={<AllTasksContainer/>} />
+        </Routes>
     </div>
   );
 }
