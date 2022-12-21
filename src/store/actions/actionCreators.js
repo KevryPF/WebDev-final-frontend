@@ -15,6 +15,13 @@ export const fetchEmployee = (employee) => {
   };
 }
 
+export const editEmployee = (employee) => {
+  return {
+    type: at.EDIT_EMPLOYEE,
+    payload: employee
+  };
+}
+
 // TASK ACTIONS
 export const fetchAllTasks = (tasks) => {
     return {

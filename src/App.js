@@ -7,7 +7,8 @@ import {
   NavbarContainer,
   EmployeeContainer,
   TaskContainer,
-  EditTaskContainer
+  EditTaskContainer,
+  EditEmployeeContainer
 } from './components/containers';
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           <Route exact path="/tasks" element={<AllTasksContainer/>} />
           <Route exact path="/task/:id" element={<TaskContainer/>} />
           <Route exact path="/edittask/:id" element={<EditTaskContainer/>} />
+          <Route exact path="/editemployee/:id" element={<EditEmployeeContainer/>} />
         </Routes>
     </div>
   );
