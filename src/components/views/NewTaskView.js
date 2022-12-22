@@ -10,12 +10,12 @@ const NewTaskView = (props) => {
             </h2>
           </div>
           <form style={{textAlign: 'center'}} onSubmit={(e) => handleSubmit(e)}>
-            <label style= {{color:'white', fontWeight: 'bold'}}>Description: </label>
+            <label style= {{color:'white', fontWeight: 'bold'}}>Description *: </label>
             <input type="text" name="description" onChange ={(e) => handleChange(e)} />
             <br/>
             <br/>
   
-            <label style={{color:'white', fontWeight: 'bold'}}>Priority Level: </label>
+            <label style={{color:'white', fontWeight: 'bold'}}>Priority Level *: </label>
             <input type="text" name="prioritylevel" onChange={(e) => handleChange(e)} />
             <br/>
             <br/>

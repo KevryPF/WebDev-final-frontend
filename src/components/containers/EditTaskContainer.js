@@ -29,7 +29,6 @@ class EditTaskContainer extends Component {
     }
 
     componentDidMount() {
-        //get task ID from url
         this.props.fetchTask(this.props.params.id);
         this.setState({
             description: this.props.task.description, 
@@ -48,7 +47,7 @@ class EditTaskContainer extends Component {
     handleSubmit = async event => {
         event.preventDefault();
         if(this.state.description==="" || this.state.prioritylevel==="" ){
-          this.setState({error:"Description and Priority Level fields are required"});
+          this.setState({error:"Starred(*) fields are required"});
           return;
         }
         //Recreate the task
@@ -82,11 +81,11 @@ class EditTaskContainer extends Component {
             <h2 style={{fontWeight: 'bold', fontSize: '20px', color: 'white'}}>
               Task Editor
             </h2>
-            <label style= {{color:'white', fontWeight: 'bold'}}>Description: </label>
+            <label style= {{color:'white', fontWeight: 'bold'}}>Description *: </label>
             <input type="text" name="description" value={this.state.description} onChange ={(e) => this.handleChange(e)}/>
             <br/>
 
-            <label style={{color:'white', fontWeight: 'bold'}}>Priority Level: </label>
+            <label style={{color:'white', fontWeight: 'bold'}}>Priority Level *: </label>
             <input type="text" name="prioritylevel" value={this.state.prioritylevel} onChange={(e) => this.handleChange(e)}/>
             <br/>
   
@@ -94,7 +93,7 @@ class EditTaskContainer extends Component {
             <input type="text" name="completionstatus" value={this.state.completionstatus} onChange={(e) => this.handleChange(e)} />
             <br/>
 
-            <label style={{color:'white', fontWeight: 'bold',}}>Assigned EmployeeID: </label>
+            <label style={{color:'white', fontWeight: 'bold'}}>Assigned EmployeeID: </label>
             <input type="text" name="employeeId" value={this.state.employeeId} onChange={(e) => this.handleChange(e)} />
             <br/>
   
