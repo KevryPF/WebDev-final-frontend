@@ -29,6 +29,13 @@ export const addEmployee = (employee) => {
   };
 };
 
+export const deleteEmployee = (employeeId) => {
+  return {
+    type: at.DELETE_EMPLOYEE,
+    payload: employeeId,
+  };
+};
+
 // TASK ACTIONS
 export const fetchAllTasks = (tasks) => {
     return {
@@ -55,5 +62,12 @@ export const addTask = (task) => {
   return {
     type: at.ADD_TASK,
     payload: task,
+  };
+};
+
+export const deleteTask = (taskId) => {
+  return {
+    type: at.DELETE_TASK,
+    payload: taskId,
   };
 };
