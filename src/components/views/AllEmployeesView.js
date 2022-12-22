@@ -7,9 +7,11 @@ const AllEmployeesView = (props) => {
     return (
       <>
         <div>There are no employees.</div>
-        <Link to={`/newemployee`}>
-        <button>Add New Employee</button>
+        <div>
+        <Link to={`/newemployee`} >
+          <button >Add New Employee</button>
         </Link>
+      </div>
       </>
     );
     
@@ -28,11 +30,10 @@ const AllEmployeesView = (props) => {
           <button onClick={() => deleteEmployee(employee.id)}>Delete</button>
         </div>
         );
-
       })}
-      <Link to={`/newemployee`}>
-        <button>Add New Employee</button>
-      </Link>
+          <Link to={`/newemployee`}>
+          <button>Add New Employee</button>
+          </Link>
     </div>
     
   );

@@ -17,6 +17,31 @@ body {
   text-decoration: none;
 }
 
+button{
+  color: black;
+  font-size: 25px;
+  background-color:rgb(141, 232, 255);
+  border-radius: 50px;
+}
+
+button:hover{
+  background-color:rgb(35, 173, 207);
+  border-radius: 50px;
+}
+
+.regularBtn{
+  font-size:20px;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color:rgb(0, 204, 255);
+}
+
+.regularBtn:hover{
+  color:Blue;
+  background-color: transparent;
+}
+
 a{
   text-decoration: none;
   color:rgb(0, 204, 255);
