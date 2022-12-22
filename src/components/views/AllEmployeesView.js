@@ -4,7 +4,15 @@ import { Link } from "react-router-dom";
 const AllEmployeesView = (props) => {
   let { deleteEmployee } = props;
   if (!props.allEmployees.length) {
-    return <div>There are no employees.</div>;
+    return (
+      <>
+        <div>There are no employees.</div>
+        <Link to={`/newemployee`}>
+        <button>Add New Employee</button>
+        </Link>
+      </>
+    );
+    
   }
 
   return (
