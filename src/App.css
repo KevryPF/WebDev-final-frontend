@@ -1,3 +1,71 @@
+body {
+  background-color: rgba(0, 0, 0, 0.836);
+  color:white;
+}
+
+.Navbar{
+  height:40px;
+  margin-top: -25px;
+  font-size: 20px;
+  background-color: rgb(47, 122, 122);
+  margin-bottom: 150px;
+}
+
+.Links{
+  background-color: rgb(47, 122, 122);
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+button{
+  color: black;
+  font-size: 25px;
+  background-color:rgb(141, 232, 255);
+  border-radius: 50px;
+}
+
+button:hover{
+  background-color:rgb(35, 173, 207);
+  border-radius: 50px;
+}
+
+.regularBtn{
+  font-size:20px;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color:rgb(0, 204, 255);
+}
+
+.regularBtn:hover{
+  color:Blue;
+  background-color: transparent;
+}
+
+a{
+  text-decoration: none;
+  color:rgb(0, 204, 255);
+}
+
+a:hover{
+  color:Blue;
+}
+
+a:focus{
+  text-decoration-line: underline;
+}
+
+ul{
+ list-style-type: none;
+ display: block;
+}
+
+li{
+  display: inline-block;
+  padding: 20px;
+  text-decoration-style: none;
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +104,4 @@
     transform: rotate(360deg);
   }
 }
+

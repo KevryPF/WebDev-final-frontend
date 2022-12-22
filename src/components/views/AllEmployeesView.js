@@ -4,7 +4,17 @@ import { Link } from "react-router-dom";
 const AllEmployeesView = (props) => {
   let { deleteEmployee } = props;
   if (!props.allEmployees.length) {
-    return <div>There are no employees.</div>;
+    return (
+      <>
+        <div>There are no employees.</div>
+        <div>
+        <Link to={`/newemployee`} >
+          <button >Add New Employee</button>
+        </Link>
+      </div>
+      </>
+    );
+    
   }
 
   return (
@@ -20,11 +30,10 @@ const AllEmployeesView = (props) => {
           <button onClick={() => deleteEmployee(employee.id)}>Delete</button>
         </div>
         );
-
       })}
-      <Link to={`/newemployee`}>
-        <button>Add New Employee</button>
-      </Link>
+          <Link to={`/newemployee`}>
+          <button>Add New Employee</button>
+          </Link>
     </div>
     
   );

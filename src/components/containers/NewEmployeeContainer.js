@@ -25,8 +25,8 @@ class NewEmployeeContainer extends Component {
 
     handleSubmit = async event => {
       event.preventDefault();
-        if(this.state.description==="" || this.state.prioritylevel==="" ){
-          this.setState({error:"Description and Priority Level fields are required"});
+        if(this.state.firstname==="" || this.state.lastname==="" ){
+          this.setState({error:"Starred(*) fields are required"});
           return;
         }
         let employee = {

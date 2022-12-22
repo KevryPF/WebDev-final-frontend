@@ -46,8 +46,8 @@ class EditEmployeeContainer extends Component {
     handleSubmit = async event => {
         event.preventDefault();
         if(this.state.firstname==="" || this.state.lastname==="" ){
-          this.setState({error:"All fields are required"});
-          return;
+            this.setState({error:"Starred(*) fields are required"});
+            return;
         }
         //Recreate the employee
         let employee = {
@@ -79,11 +79,11 @@ class EditEmployeeContainer extends Component {
             <h2 style={{fontWeight: 'bold', fontSize: '20px', color: 'white'}}>
               Employee Editor
             </h2> 
-            <label style= {{color:'white', fontWeight: 'bold'}}>First name: </label>
+            <label style= {{color:'white', fontWeight: 'bold'}}>First name *: </label>
             <input type="text" name="firstname" value={this.state.firstname} onChange ={(e) => this.handleChange(e)}/>
             <br/>
 
-            <label style= {{color:'white', fontWeight: 'bold'}}>Last name: </label>
+            <label style= {{color:'white', fontWeight: 'bold'}}>Last name *: </label>
             <input type="text" name="lastname" value={this.state.lastname} onChange ={(e) => this.handleChange(e)}/>
             <br/>
 

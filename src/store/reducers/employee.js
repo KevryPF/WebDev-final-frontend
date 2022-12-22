@@ -1,4 +1,4 @@
-import { FETCH_EMPLOYEE } from "../actions/actionTypes";
+import { FETCH_EMPLOYEE, DELETE_EMPLOYEE } from "../actions/actionTypes";
 
 const initialState = {
   tasks: [],
@@ -7,9 +7,9 @@ const initialState = {
 const employee = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_EMPLOYEE:
-      return action.payload;
+        return action.payload;
     default:
-      return state;
+        return state;
   }
 };
 

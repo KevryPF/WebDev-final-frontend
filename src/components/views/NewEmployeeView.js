@@ -10,12 +10,12 @@ const NewEmployeeView = (props) => {
             </h2>
           </div>
           <form style={{textAlign: 'center'}} onSubmit={(e) => handleSubmit(e)}>
-            <label style= {{color:'white', fontWeight: 'bold'}}>First name: </label>
+            <label style= {{color:'white', fontWeight: 'bold'}}>First name *: </label>
             <input type="text" name="firstname" onChange ={(e) => handleChange(e)} />
             <br/>
             <br/>
   
-            <label style={{color:'white', fontWeight: 'bold'}}>Last name: </label>
+            <label style={{color:'white', fontWeight: 'bold'}}>Last name *: </label>
             <input type="text" name="lastname" onChange={(e) => handleChange(e)} />
             <br/>
             <br/>

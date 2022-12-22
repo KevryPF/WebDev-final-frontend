@@ -28,7 +28,7 @@ class NewTaskContainer extends Component {
       event.preventDefault();
         //Recreate the task
         if(this.state.description==="" || this.state.prioritylevel==="" ){
-          this.setState({error:"Description and Priority Level fields are required"});
+          this.setState({error:"Starred(*) fields are required"});
           return;
         }
         let task = {

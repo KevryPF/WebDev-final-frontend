@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { useParams } from "react-router";
-import { fetchTaskThunk } from "../../store/thunks";
+import { fetchTaskThunk, deleteTaskThunk } from "../../store/thunks";
 import TaskView from "../views/TaskView";
 
 //Added this from https://stackoverflow.com/questions/69967745/react-router-v6-access-a-url-parameter 
@@ -27,6 +27,7 @@ class TaskContainer extends Component {
       <TaskView 
         task={this.props.task}
         employee={this.props.employee}
+        deleteTask={this.props.deleteTask}
       />
     );
   }
@@ -44,6 +45,7 @@ const mapState = (state) => {
 const mapDispatch = (dispatch) => {
   return {
     fetchTask: (id) => dispatch(fetchTaskThunk(id)),
+    deleteTask: (taskId) => dispatch(deleteTaskThunk(taskId))
   };
 };
 

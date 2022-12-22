@@ -4,6 +4,8 @@ import { useParams } from "react-router";
 import { 
   fetchEmployeeThunk,
   fetchAllTasksThunk,
+  deleteEmployeeThunk,
+  editTaskThunk
 } from "../../store/thunks";
 
 import EmployeeView from "../views/EmployeeView";
@@ -20,7 +22,6 @@ const withRouter = WrappedComponent => props => {
 
 class EmployeeContainer extends Component {
   componentDidMount() {
-//get instructor ID from url
     this.props.fetchEmployee(this.props.params.id);
     this.props.fetchTasks();
   }
@@ -30,6 +31,8 @@ class EmployeeContainer extends Component {
       <EmployeeView 
         employee={this.props.employee}
         allTasks={this.props.allTasks}
+        editTask={this.props.editTask}
+        deleteEmployee={this.props.deleteEmployee}
       />
     );
   }
@@ -48,6 +51,8 @@ const mapDispatch = (dispatch) => {
   return {
     fetchEmployee: (id) => dispatch(fetchEmployeeThunk(id)),
     fetchTasks: () => dispatch(fetchAllTasksThunk()),
+    deleteEmployee: (employeeId) => dispatch(deleteEmployeeThunk(employeeId)),
+    editTask: (task) => dispatch(editTaskThunk(task))
   };
 };
 
